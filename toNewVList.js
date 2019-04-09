@@ -109,26 +109,25 @@ const getX = R.pipe(
 const files = getFilterFile( ['.esp'], getPathsFiles('Testing\\') )
 
 const getDeepKeys = (times, obj) => {
-    let array = []
-    while (times--) {
-        for (key in obj) {
-            if (times > 0) {
-                array.push(key)
+    while(times--) {
+        for (key in obj){
+            if (times != 0) {
+                console.log(key)
             } else {
-               getDeepKeys(times, obj[key])
+                getDeepKeys(times, obj[key])
             }
         }
     }
-    console.log(array)
 }
 
 files.forEach(x => {
     let obj = getX(Object.freeze(getObj(x)))
     let txt = getTxtInOriginCod(x)
-    // for (key in obj) {
-        getDeepKeys(1, obj)
+    getDeepKeys(3, obj)
+    for (key in obj) {
+        
         // console.log(key)
-    // }
+    }
 })
 
 // const filterObjects = objects => objects.map(x =>  getX(Object.freeze(x)))
