@@ -1,5 +1,5 @@
 let { adapt }= require('./adapt')
-let count = require('../Mix/Text/countInTxt')
+let count = require('../countInTxt')
 
 module.exports.txtToRgx = txt => {
 

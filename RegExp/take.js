@@ -11,9 +11,11 @@ module.exports.intls = {
     },
     comp: {
         byName: (nameComp, txt) => {
+            // console.log('In rgx: ',nameComp)
+            // console.log('rgx: ',rgx.make.intls.comp.byName(nameComp))
             if (rgx.make.intls.comp.byName(nameComp).test(txt)) {
                 // console.log('------------------------------------------')
-                // console.log(rgx.make.intls.comp.byName(nameComp))
+                // console.log('In rgx: ',nameComp)
                 // console.log(txt.match(rgx.make.intls.comp.byName(nameComp)))
                 // console.log('------------------------------------------')
                 // console.log(txt)
